@@ -1,11 +1,12 @@
 apply plugin: 'ssh'
 
 buildscript {
-    repositories {
-        mavenCentral()
-    }
+    //repositories {
+    //    mavenCentral()
+    //}
     dependencies {
-        classpath 'org.hidetake:gradle-ssh-plugin:0.3.4'
+        //classpath 'org.hidetake:gradle-ssh-plugin:0.3.4'
+        classpath fileTree(dir:'dep-libs', include:'*.jar')
     }
 }
 
