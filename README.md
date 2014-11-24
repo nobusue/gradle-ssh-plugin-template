@@ -9,6 +9,8 @@ Prerequisite
 
 Java 7 or later.
 
+(If you don't have available SSH server, use Vagrant)
+
 
 Try it now
 ----------
