@@ -1,5 +1,4 @@
 plugins {
-    id 'war'
     id 'org.hidetake.ssh' version '0.4.5'
 }
 
