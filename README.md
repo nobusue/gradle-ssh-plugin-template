@@ -16,12 +16,13 @@ Try it now
 Clone the repository.
 
 ```bash
-git clone https://github.com/gradle-ssh-plugin/template.git
-cd template
+git clone https://github.com/nobusue/gradle-ssh-plugin-template.git
+cd gradle-ssh-plugin-template
 ```
 
 Edit `build.gradle` and run Gradle.
 
 ```bash
+vagrant up
 ./gradlew showPlatformVersion
 ```
