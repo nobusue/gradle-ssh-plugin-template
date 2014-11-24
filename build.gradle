@@ -17,20 +17,9 @@ ssh.settings {
 
 task showPlatformVersion << {
     ssh.run {
-        session(remotes.localhost) {
+        session(remotes.targethost) {
             execute('uname -a')
             execute('cat /etc/*-release || true')
-        }
-    }
-}
-
-ext.webappsDir = '/webapps'
-
-task deploy(dependsOn: war) << {
-    ssh.run {
-        session(remotes.targethost) {
-            put(war.archivePath.path, webappsDir)
-            execute('sudo service tomcat restart')
         }
     }
 }
