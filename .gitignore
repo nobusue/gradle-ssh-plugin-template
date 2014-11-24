@@ -13,3 +13,6 @@ bin/
 .settings/
 .classpath
 .project
+
+# Vagrant
+.vagrant/

@@ -4,10 +4,10 @@ plugins {
 }
 
 remotes {
-    localhost {
-        host = 'localhost'
-        user = System.properties['user.name']
-        identity = file("${System.properties['user.home']}/.ssh/id_rsa")
+    targethost {
+        host = '192.168.33.10'
+        user = 'vagrant'
+        identity = file("${System.properties['user.home']}/.vagrant.d/insecure_private_key")
     }
 }
 
@@ -28,7 +28,7 @@ ext.webappsDir = '/webapps'
 
 task deploy(dependsOn: war) << {
     ssh.run {
-        session(remotes.localhost) {
+        session(remotes.targethost) {
             put(war.archivePath.path, webappsDir)
             execute('sudo service tomcat restart')
         }
